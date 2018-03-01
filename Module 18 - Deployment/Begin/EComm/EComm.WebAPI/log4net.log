@@ -1,0 +1,38 @@
+2018-02-27 22:57:08,065 INFO  - Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-02-27 22:57:08,068 INFO  - Executed action EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) in 64.9672ms
+2018-02-27 22:57:08,113 INFO  - Request finished in 84.0953ms 404 
+INFO  10:58:19 Request starting HTTP/1.1 GET http://localhost:55913/api/Product  
+INFO  10:58:19 Executing action method EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) with arguments ((null)) - ModelState is Valid
+INFO  10:58:19 Entity Framework Core 2.0.1-rtm-125 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+INFO  10:58:24 Executed DbCommand (51ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[IsDiscontinued], [p].[Package], [p].[ProductName], [p].[SupplierId], [p].[UnitPrice]
+FROM [Product] AS [p]
+INFO  10:58:24 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  10:58:24 Executed action EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) in 5222.6592ms
+INFO  10:58:24 Request finished in 5752.5804ms 200 application/json; charset=utf-8
+INFO  10:58:24 Request starting HTTP/1.1 GET http://localhost:55913/favicon.ico  
+INFO  10:58:24 Request finished in 17.6804ms 404 
+INFO  10:58:28 Request starting HTTP/1.1 GET http://localhost:55913/api/Product/5  
+INFO  10:58:28 Executing action method EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) with arguments (5) - ModelState is Valid
+INFO  10:58:28 ****** Get(int id): id=5 Called
+INFO  10:58:28 Entity Framework Core 2.0.1-rtm-125 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+INFO  10:58:28 Executed DbCommand (33ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[IsDiscontinued], [p].[Package], [p].[ProductName], [p].[SupplierId], [p].[UnitPrice]
+FROM [Product] AS [p]
+WHERE [p].[Id] = @__id_0
+INFO  10:58:28 ****** Get(int id): Product with Id=5 Returned
+INFO  10:58:28 Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  10:58:28 Executed action EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) in 154.7387ms
+INFO  10:58:29 Request finished in 286.3143ms 200 application/json; charset=utf-8
+INFO  10:58:31 Request starting HTTP/1.1 GET http://localhost:55913/api/Product/500  
+INFO  10:58:31 Executing action method EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) with arguments (500) - ModelState is Valid
+INFO  10:58:31 ****** Get(int id): id=500 Called
+INFO  10:58:31 Entity Framework Core 2.0.1-rtm-125 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+INFO  10:58:31 Executed DbCommand (1ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[IsDiscontinued], [p].[Package], [p].[ProductName], [p].[SupplierId], [p].[UnitPrice]
+FROM [Product] AS [p]
+WHERE [p].[Id] = @__id_0
+WARN  10:58:31 ****** Get(int id): Product with Id=500 Not Found
+INFO  10:58:31 Executing HttpStatusCodeResult, setting HTTP status code 404
+INFO  10:58:31 Executed action EComm.WebAPI.Controllers.ProductController.Get (EComm.WebAPI) in 79.8683ms
+INFO  10:58:31 Request finished in 91.0226ms 404 
